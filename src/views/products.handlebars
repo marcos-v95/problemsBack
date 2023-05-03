@@ -1,0 +1,35 @@
+{{#if isValid}}
+  <div>
+    <h3>Render de productos con paginacion de mongoose</h3>
+
+    {{#each payload}}
+      <div>
+        <p>Nombre: {{this.title}}</p>
+        <p>Descripcion: {{this.description}}</p>
+        <p>Precio: {{this.price}}</p>
+        <p>Stock disponible: {{this.stock}}</p>
+        <p>Categoria: {{this.category}}</p>
+      </div>
+      <br/>
+    {{/each}}
+
+  </div>
+  <br/>
+  <div>
+    <p>Pagina actual: {{this.currentPage}}</p>
+
+    {{#if hasPrevPage}}
+      <a href={{this.prevLink}}><< Anterior</a>
+    {{/if}}
+
+    {{#if hasNextPage}}
+      <a href={{this.nextLink}}>Siguiente >></a>
+    {{/if}}    
+
+  </div>
+
+{{else}}
+  <div>
+    <p>No hay productos para mostrar</p>
+  </div>
+{{/if}}

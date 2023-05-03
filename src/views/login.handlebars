@@ -1,0 +1,15 @@
+{{#if exists}}
+  <h3 style="text-transform: capitalize;">Bienvenido! {{user.first_name}}</h3>
+  <div>
+    <h4>Tus datos de perfil son:</h4>
+      <p>Nombre completo: {{user.first_name}} {{user.last_name}}</p>
+      <p>Edad: {{user.age}} años</p>
+      <p>Email:{{user.email}}</p>
+      <button type="button" onclick=location.href="/logout">Cerrar sesion</button>
+  </div>
+  
+  {{else}}
+    <h3>Usuario o contraseña incorrectos!</h3>
+    <button type="button" onclick=location.href='/'>Ir al Login</button>
+    <button type="button" onclick=location.href='/register'>Ir a registro</button>
+{{/if}}

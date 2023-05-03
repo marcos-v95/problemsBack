@@ -1,0 +1,20 @@
+<div>
+  <h1>Inicio de sesion</h1>
+  <form id="loginForm">
+    <div>
+      <label for="email">Email</label>
+      <input id="email" name="email" required>
+    </div>
+    <div>
+      <label for="password">Contraseña</label>
+      <input id="password" name="password" >
+    </div>
+    <button type="submit" onclick="toLogin()">Ingresar</button>
+    <button type="button" onclick=location.href='/register'>Registrate!</button>
+  </form>
+</div>
+<div>
+  <h4>Iniciar sesion con: </h4>
+  <a href="api/sessions/github"><button>GitHub</button></a>
+</div>
+<script src="js/login.js"></script>

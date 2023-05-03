@@ -1,0 +1,16 @@
+{{!-- Podemos acceder a las props de cada producto gracias a mongoose population que nos trae todo el producto,
+de lo contrario, solo renderizaremos lo que existe en la base de datos de carts (solo almacenamos id y cantidad del producto) --}}
+<div>
+  <h2>Productos del carrito con Id: {{this.id}}</h2>
+  <div>
+    {{#each products}}
+      <p>Nombre: {{this.product.title}}</p>
+      <p>Descripcion: {{this.product.description}}</p>
+      <p>Precio: {{this.product.price}}</p>
+      <p>Stock disponible: {{this.product.stock}}</p>
+      <p>Categoria: {{this.product.category}}</p>
+      <p>Cantidad:{{this.quantity}}</p>
+      <br/>
+    {{/each}}
+  </div>
+</div>
